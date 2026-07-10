@@ -1,4 +1,10 @@
 const $=(s,p=document)=>p.querySelector(s), $$=(s,p=document)=>[...p.querySelectorAll(s)];
+const savedTheme=localStorage.getItem('ltd-explainer-theme');
+const initialTheme=savedTheme==='light'?'light':'dark';
+document.documentElement.dataset.theme=initialTheme;
+function syncThemeButton(){const dark=document.documentElement.dataset.theme==='dark';const button=$('#themeToggle');if(!button)return;button.textContent=dark?'☀':'☾';button.title=dark?'Switch to light mode':'Switch to dark mode';button.setAttribute('aria-label',button.title)}
+syncThemeButton();
+$('#themeToggle').onclick=()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('ltd-explainer-theme',next);syncThemeButton()};
 const views=['overview','architecture','educator','student','explainer'];
 $$('[data-view]').forEach(btn=>btn.onclick=()=>showView(btn.dataset.view));
 function showView(id){$$('.view').forEach(v=>v.classList.toggle('active',v.id===id));$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===id));$('.slide-count').textContent=`${String(views.indexOf(id)+1).padStart(2,'0')} / 05`;if(id==='explainer')startDemo();}
