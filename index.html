@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="refine.css" />
   <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="technical.css" />
 </head>
 <body>
   <header class="topbar">
@@ -17,11 +18,12 @@
     <nav class="view-tabs" aria-label="Presentation views">
       <button data-view="overview" class="active">Overview</button>
       <button data-view="architecture">System</button>
+      <button data-view="technical">Technical diagram</button>
       <button data-view="educator">Educator</button>
       <button data-view="student">Student</button>
       <button data-view="explainer">Live explainer <span class="live-dot"></span></button>
     </nav>
-    <div class="header-actions"><span class="slide-count">01 / 05</span><button id="themeToggle" class="icon-btn theme-toggle" title="Switch to light mode" aria-label="Switch to light mode">☀</button><button id="fullscreen" class="icon-btn" title="Full screen">⛶</button></div>
+    <div class="header-actions"><span class="slide-count">01 / 06</span><button id="themeToggle" class="icon-btn theme-toggle" title="Switch to light mode" aria-label="Switch to light mode">☀</button><button id="fullscreen" class="icon-btn" title="Full screen">⛶</button></div>
   </header>
 
   <main>
@@ -59,6 +61,39 @@
           <div id="techTooltip" class="tech-tooltip" role="tooltip"><div class="tooltip-top"><span></span><small>HOW LTD USES IT</small></div><h3></h3><p></p><div class="tooltip-example"></div></div>
         </div>
         <div class="arch-note"><b>Hover over a technology to open the engine.</b><span>Each component has a clear job in delivering active, observable learning at scale.</span></div>
+      </article>
+    </section>
+
+    <section class="view" id="technical">
+      <article class="slide technical-slide">
+        <div class="slide-head technical-head"><div><div class="slide-kicker">LTD TECHNICAL ARCHITECTURE</div><h2>From one learning action to a connected system.</h2></div><div class="diagram-legend"><span><i class="sync"></i>Synchronous</span><span><i class="realtime"></i>Real-time</span><span><i class="external"></i>Managed service</span></div></div>
+        <div class="technical-map">
+          <div class="diagram-zone client-zone">
+            <div class="zone-label"><span>01</span> EXPERIENCE LAYER</div>
+            <div class="zone-body client-body">
+              <div class="diagram-node primary-node"><span class="node-icon">R</span><div><b>React + TypeScript SPA</b><small>TanStack Router & Query · Tailwind · Zustand</small></div></div>
+              <div class="mini-capabilities"><span>Teacher authoring</span><span>Student learning</span><span>Progress review</span></div>
+              <div class="browser-runtime"><b>Browser runtimes</b><span>Pyodide <small>instant Python</small></span><span>Monaco <small>code editor</small></span></div>
+            </div>
+          </div>
+          <div class="vertical-flow"><span>REST / HTTPS</span><i></i><span>JWT identity</span></div>
+          <div class="diagram-zone application-zone">
+            <div class="zone-label"><span>02</span> APPLICATION & LEARNING SERVICES</div>
+            <div class="zone-body app-body">
+              <div class="api-core"><span class="node-icon">F</span><div><b>FastAPI + Python</b><small>One secure application surface</small></div></div>
+              <div class="service-lanes"><div><b>Curriculum</b><small>Courses · modules · items</small></div><div><b>Learning sessions</b><small>Threads · messages · progress</small></div><div><b>AI orchestration</b><small>Tutor · generation · evaluation</small></div><div><b>Identity & access</b><small>Roles · permissions · JWT</small></div></div>
+            </div>
+          </div>
+          <div class="vertical-flow split-flow"><span>SQL</span><i></i><span>Provider APIs</span><i></i><span>Session APIs</span></div>
+          <div class="foundation-grid">
+            <div class="diagram-zone data-zone"><div class="zone-label"><span>03</span> LEARNING MEMORY</div><div class="foundation-node"><span class="node-icon">P</span><div><b>PostgreSQL</b><small>People · curriculum · conversations · evidence</small></div></div></div>
+            <div class="diagram-zone intelligence-zone"><div class="zone-label"><span>04</span> INTELLIGENCE</div><div class="foundation-node"><span class="node-icon">✦</span><div><b>AI provider layer</b><small>OpenAI · Anthropic · Gemini</small></div></div></div>
+            <div class="diagram-zone media-zone"><div class="zone-label"><span>05</span> MEDIA</div><div class="foundation-node"><span class="node-icon">C</span><div><b>Cloudinary</b><small>Upload · transform · deliver images</small></div></div></div>
+            <div class="diagram-zone compute-zone"><div class="zone-label"><span>06</span> ADVANCED COMPUTE</div><div class="foundation-node"><span class="node-icon">›_</span><div><b>Jupyter kernels</b><small>Managed notebook execution</small></div></div></div>
+          </div>
+          <div class="realtime-rail"><div class="rail-title"><span>∞</span><b>Yjs + WebSockets</b><small>Live code synchronization and educator presence</small></div><div class="rail-line"><i></i><em>shared state</em><i></i><em>instant updates</em><i></i></div></div>
+        </div>
+        <div class="technical-foot"><span>FAST PATH</span><b>Most learning actions stay in the browser + application core.</b><i></i><span>SCALE PATH</span><b>Specialized AI, media, and notebook work routes to managed services.</b></div>
       </article>
     </section>
 

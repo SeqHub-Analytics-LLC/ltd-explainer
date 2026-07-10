@@ -5,9 +5,9 @@ document.documentElement.dataset.theme=initialTheme;
 function syncThemeButton(){const dark=document.documentElement.dataset.theme==='dark';const button=$('#themeToggle');if(!button)return;button.textContent=dark?'☀':'☾';button.title=dark?'Switch to light mode':'Switch to dark mode';button.setAttribute('aria-label',button.title)}
 syncThemeButton();
 $('#themeToggle').onclick=()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('ltd-explainer-theme',next);syncThemeButton()};
-const views=['overview','architecture','educator','student','explainer'];
+const views=['overview','architecture','technical','educator','student','explainer'];
 $$('[data-view]').forEach(btn=>btn.onclick=()=>showView(btn.dataset.view));
-function showView(id){$$('.view').forEach(v=>v.classList.toggle('active',v.id===id));$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===id));$('.slide-count').textContent=`${String(views.indexOf(id)+1).padStart(2,'0')} / 05`;if(id==='explainer')startDemo();}
+function showView(id){$$('.view').forEach(v=>v.classList.toggle('active',v.id===id));$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===id));$('.slide-count').textContent=`${String(views.indexOf(id)+1).padStart(2,'0')} / 06`;if(id==='explainer')startDemo();}
 $('#fullscreen').onclick=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
 const techDetails={
  react:{icon:'R',name:'React + TypeScript',body:'Builds the fast, responsive workspace teachers and students use in the browser. It keeps complex learning interactions clear and immediate.',example:'In LTD: course authoring, the reading workspace, progress views, chat and interactive exercises.'},
