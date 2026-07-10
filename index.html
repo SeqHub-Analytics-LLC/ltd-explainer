@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LTD — Look. Think. Do.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="refine.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="LTD home"><span class="brand-mark">LTD<span>.</span></span><span class="brand-tag">LOOK · THINK · DO</span></a>
+    <nav class="view-tabs" aria-label="Presentation views">
+      <button data-view="overview" class="active">Overview</button>
+      <button data-view="architecture">System</button>
+      <button data-view="educator">Educator</button>
+      <button data-view="student">Student</button>
+      <button data-view="explainer">Live explainer <span class="live-dot"></span></button>
+    </nav>
+    <div class="header-actions"><span class="slide-count">01 / 05</span><button id="fullscreen" class="icon-btn" title="Full screen">⛶</button></div>
+  </header>
+
+  <main>
+    <section class="view active" id="overview">
+      <article class="slide overview-slide">
+        <div class="slide-kicker">THE LTD LEARNING ECOSYSTEM</div>
+        <h1>Human expertise in.<br><em>Active learning</em> out.</h1>
+        <p class="lead">LTD connects educators and learners through guided practice, purposeful AI support, and visible progress.</p>
+        <div class="ecosystem">
+          <div class="persona teacher-persona">
+            <div class="persona-icon">✦</div><span class="eyebrow">EDUCATORS</span><h3>Shape expertise into<br>guided experiences</h3>
+            <div class="chips"><span>Author</span><span>Guide</span><span>Observe</span></div>
+          </div>
+          <div class="flow-arrow"><span>Course intent</span><b>→</b></div>
+          <div class="engine-core"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span>LOOK</span><strong>THINK</strong><span>DO</span><small>AI learning engine</small></div>
+          <div class="flow-arrow"><span>Adaptive practice</span><b>→</b></div>
+          <div class="persona student-persona">
+            <div class="persona-icon">◎</div><span class="eyebrow">LEARNERS</span><h3>Understand deeply<br>by doing the work</h3>
+            <div class="chips"><span>Explore</span><span>Practice</span><span>Reflect</span></div>
+          </div>
+        </div>
+        <div class="outcome-strip"><span>ONE CONNECTED LOOP</span><b>Educator insight</b><i>↗</i><b>Student action</b><i>↗</i><b>AI-supported feedback</b><i>↗</i><b>Measurable growth</b></div>
+      </article>
+    </section>
+
+    <section class="view" id="architecture">
+      <article class="slide architecture-slide">
+        <div class="slide-head"><div><div class="slide-kicker">LTD SYSTEM OVERVIEW</div><h2>The engine behind every learning moment.</h2></div><p>One platform coordinates curriculum, AI, practice, feedback, and classroom insight.</p></div>
+        <div class="investor-system">
+          <div class="system-personas"><div><span>EDUCATOR</span><b>Creates the learning journey</b><small>Goals · content · activities · guidance</small></div><i>↔</i><div><span>LEARNER</span><b>Builds understanding by doing</b><small>Read · discuss · code · reflect</small></div></div>
+          <div class="ltd-spine"><span>THE LTD LEARNING ENGINE</span><b>One continuous loop from educator intent to learner evidence.</b><div class="signal-flow"><i></i><em>plan</em><i></i><em>learn</em><i></i><em>respond</em><i></i><em>improve</em><i></i></div></div>
+          <div class="tech-stack" aria-label="Current LTD technology stack">
+            <button class="tech-card" data-tech="react"><span class="tech-icon">R</span><b>React + TypeScript</b><small>The experience layer</small></button><button class="tech-card" data-tech="fastapi"><span class="tech-icon">F</span><b>FastAPI + Python</b><small>The platform brain</small></button><button class="tech-card" data-tech="postgres"><span class="tech-icon">P</span><b>PostgreSQL</b><small>Learning memory</small></button><button class="tech-card featured" data-tech="ai"><span class="tech-icon">✦</span><b>AI providers</b><small>Adaptive intelligence</small></button><button class="tech-card featured" data-tech="cloudinary"><span class="tech-icon">C</span><b>Cloudinary</b><small>Learning media</small></button><button class="tech-card" data-tech="compute"><span class="tech-icon">›_</span><b>Pyodide + Jupyter</b><small>Live computation</small></button><button class="tech-card" data-tech="collab"><span class="tech-icon">∞</span><b>Yjs + WebSockets</b><small>Live collaboration</small></button>
+          </div>
+          <div id="techTooltip" class="tech-tooltip" role="tooltip"><div class="tooltip-top"><span></span><small>HOW LTD USES IT</small></div><h3></h3><p></p><div class="tooltip-example"></div></div>
+        </div>
+        <div class="arch-note"><b>Hover over a technology to open the engine.</b><span>Each component has a clear job in delivering active, observable learning at scale.</span></div>
+      </article>
+    </section>
+
+    <section class="view" id="educator">
+      <article class="slide journey-slide educator-slide">
+        <div class="slide-head"><div><div class="slide-kicker">LTD IN PRACTICE · EDUCATOR</div><h2>From expertise to an active-learning journey.</h2></div><p>Author once, guide every learner, and see where support matters.</p></div>
+        <div class="journey-line">
+          <div class="journey-step active"><span>01</span><div class="step-icon">＋</div><h3>Create a course</h3><p>Set the topic, audience, and learning intent.</p><small>COURSE MANAGER</small></div>
+          <div class="journey-arrow">→</div>
+          <div class="journey-step"><span>02</span><div class="step-icon">▤</div><h3>Design modules</h3><p>Combine readings, media, HTML, code, and notebooks.</p><small>FLEXIBLE ITEMS</small></div>
+          <div class="journey-arrow">→</div>
+          <div class="journey-step"><span>03</span><div class="step-icon">✦</div><h3>Guide with AI</h3><p>Define goals and let LTD help shape purposeful practice.</p><small>AI ORCHESTRATOR</small></div>
+          <div class="journey-arrow">→</div>
+          <div class="journey-step"><span>04</span><div class="step-icon">↗</div><h3>Publish & observe</h3><p>Review engagement, progress, code, and reflections.</p><small>LEARNING INSIGHT</small></div>
+        </div>
+        <div class="feature-ribbon"><b>What educators control</b><span>Learning goals</span><span>Bloom level</span><span>Content sequence</span><span>AI availability</span><span>Checks for understanding</span><span>Feedback</span></div>
+      </article>
+    </section>
+
+    <section class="view" id="student">
+      <article class="slide journey-slide student-slide">
+        <div class="slide-head"><div><div class="slide-kicker">LTD IN PRACTICE · STUDENT</div><h2>Learning that asks students to think and do.</h2></div><p>A guided experience where AI supports effort instead of replacing it.</p></div>
+        <div class="student-loop">
+          <div class="loop-center"><div class="pulse"></div><b>GROW</b><small>understanding<br>with every cycle</small></div>
+          <div class="loop-card look"><span>01 · LOOK</span><h3>Engage attentively</h3><p>Read, watch, inspect examples, and explore interactive content.</p><div>Text · Video · HTML</div></div>
+          <div class="loop-card think"><span>02 · THINK</span><h3>Make meaning</h3><p>Answer checks, explain reasoning, and ask the AI tutor for help.</p><div>Questions · AI dialogue</div></div>
+          <div class="loop-card do"><span>03 · DO</span><h3>Apply & reflect</h3><p>Write code, use notebooks, submit work, and reflect on learning.</p><div>Code · Notebook · Reflection</div></div>
+          <svg class="loop-arrows" viewBox="0 0 1000 390" aria-hidden="true"><path d="M295 85 C430 10 570 10 705 85"/><path d="M800 155 C850 235 805 315 710 340"/><path d="M290 340 C185 300 155 210 205 145"/></svg>
+        </div>
+        <div class="agency-note"><span class="shield">✓</span><div><b>Built-in productive friction</b><small>Comprehension checks, staged prompts, and reflection keep the learner—not the chatbot—at the center.</small></div><div class="progress-pill"><i></i> Progress becomes visible</div></div>
+      </article>
+    </section>
+
+    <section class="view explainer-view" id="explainer">
+      <div class="demo-shell">
+        <aside class="demo-sidebar">
+          <div class="demo-logo">LTD<span>.</span></div>
+          <div class="workspace-label">DEMO WORKSPACE</div>
+          <button class="side-link active">⌂ <span>Home</span></button><button class="side-link">▤ <span>My courses</span></button><button class="side-link">◴ <span>Recent chats</span></button>
+          <div class="workspace-label">WALKTHROUGH</div>
+          <div id="stepList" class="step-list"></div>
+          <div class="demo-user"><div>TT</div><span><b>Taiwo Togun</b><small>Academy workspace</small></span></div>
+        </aside>
+        <div class="demo-main">
+          <div class="demo-toolbar">
+            <div class="role-tabs"><button data-role="teacher" class="active">Educator side</button><button data-role="student">Student side</button></div>
+            <div class="playback"><button id="restart" title="Restart">↺</button><button id="prev" title="Previous">‹</button><button id="playPause" class="play">Ⅱ <span>Pause</span></button><button id="next" title="Next">›</button><select id="speed" aria-label="Playback speed"><option value="1">1×</option><option value="1.5">1.5×</option><option value=".65">0.65×</option></select></div>
+          </div>
+          <div class="progress-track"><i id="demoProgress"></i></div>
+          <div class="stage-wrap"><div id="annotation" class="annotation"><span>01</span><div><b></b><p></p></div></div><div id="demoStage" class="demo-stage"></div><div id="cursor" class="fake-cursor">➤</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
