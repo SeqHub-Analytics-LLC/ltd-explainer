@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="refine.css" />
   <link rel="stylesheet" href="theme.css" />
   <link rel="stylesheet" href="technical.css" />
+  <link rel="stylesheet" href="tour.css" />
 </head>
 <body>
   <header class="topbar">
@@ -136,7 +137,7 @@
       <div class="demo-shell">
         <aside class="demo-sidebar">
           <div class="demo-logo">LTD<span>.</span></div>
-          <div class="workspace-label">DEMO WORKSPACE</div>
+          <div class="workspace-label">GUIDED PRODUCT TOUR</div>
           <button class="side-link active">⌂ <span>Home</span></button><button class="side-link">▤ <span>My courses</span></button><button class="side-link">◴ <span>Recent chats</span></button>
           <div class="workspace-label">WALKTHROUGH</div>
           <div id="stepList" class="step-list"></div>
@@ -144,7 +145,8 @@
         </aside>
         <div class="demo-main">
           <div class="demo-toolbar">
-            <div class="role-tabs"><button data-role="teacher" class="active">Educator side</button><button data-role="student">Student side</button></div>
+            <div class="role-tabs"><button data-role="teacher" class="active"><small>VIEW 1 OF 2</small> Educator experience</button><button data-role="student"><small>VIEW 2 OF 2</small> Student experience</button></div>
+            <div class="tour-runtime"><i></i><span id="tourRuntime">~3 min guided tour</span></div>
             <div class="playback"><button id="restart" title="Restart">↺</button><button id="prev" title="Previous">‹</button><button id="playPause" class="play">Ⅱ <span>Pause</span></button><button id="next" title="Next">›</button><select id="speed" aria-label="Playback speed"><option value="1">1×</option><option value="1.5">1.5×</option><option value=".65">0.65×</option></select></div>
           </div>
           <div class="progress-track"><i id="demoProgress"></i></div>
@@ -154,5 +156,6 @@
     </section>
   </main>
   <script src="app.js"></script>
+  <script src="tour-v2.js"></script>
 </body>
 </html>
