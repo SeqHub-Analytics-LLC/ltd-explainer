@@ -1,5 +1,6 @@
 // Extended, self-playing LTD product tour. Kept separate from the presentation logic.
 (()=>{
+window.LTD_TOUR_V2=true;
 const q=(s,p=document)=>p.querySelector(s),qa=(s,p=document)=>[...p.querySelectorAll(s)];
 const educator=[
  ['ORIENT','Open the Academy workspace','See active courses, cohorts, upcoming mentor sessions and learner signals at a glance.','e-dashboard',[42,38]],

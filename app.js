@@ -37,7 +37,7 @@ const studentSteps=[
 ];
 let role='teacher',index=0,playing=true,timer=null,speed=1,started=false;
 function steps(){return role==='teacher'?teacherSteps:studentSteps}
-function startDemo(){if(!started){started=true;renderStep();schedule()}}
+function startDemo(){if(window.LTD_TOUR_V2)return;if(!started){started=true;renderStep();schedule()}}
 function schedule(){clearTimeout(timer);const hold=steps()[index]?.screen==='studentConversation'?6500:4300;if(playing)timer=setTimeout(()=>{index=(index+1)%steps().length;renderStep();schedule()},hold/speed)}
 function renderStep(){const data=steps()[index];renderList();$('#annotation span').textContent=String(index+1).padStart(2,'0');$('#annotation b').textContent=data.title;$('#annotation p').textContent=data.desc;$('#demoStage').innerHTML=screen(data.screen);$('#demoProgress').style.width=`${((index+1)/steps().length)*100}%`;const c=$('#cursor');c.style.left=data.cursor[0]+'%';c.style.top=data.cursor[1]+'%';setTimeout(()=>{$('.target')?.classList.add('spotlight');bindSimulation();if(data.screen==='studentConversation')runConversation()},500)}
 function renderList(){$('#stepList').innerHTML=steps().map((s,i)=>`<button data-step="${i}" class="${i===index?'active':''} ${i<index?'done':''}"><span>${i<index?'✓':i+1}</span>${s.title}</button>`).join('');$$('[data-step]').forEach(b=>b.onclick=()=>{index=+b.dataset.step;playing=false;syncPlay();renderStep();schedule()})}
